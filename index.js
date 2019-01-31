@@ -17,7 +17,9 @@ function nowServing(katzDeliLine) {
 function currentLine(katzDeliLine) {
   var lineList = 'The line is currently:';
   for (let i = 0; i < katzDeliLine.length; i++) {
-    lineList.concat((i + 1) +'. ' + katzDeliLine[i]+ ',');
+    var position = i + 1
+    var name = katzDeliLine[i];
+    lineList.concat(position + '. ' + name + ', ');
   }
   return lineList;
 }
