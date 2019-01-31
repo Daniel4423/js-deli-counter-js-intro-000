@@ -22,7 +22,11 @@ function currentLine(katzDeliLine) {
       for (let i = 0; i < katzDeliLine.length; i++) {
         var position = i + 1
         var name = katzDeliLine[i];
-        lineList = lineList.concat(position + '. ' + name + ', ');
+          if (i = katzDeliLine.length - 1) {
+            lineList = lineList.concat(position + '. ' + name);
+          } else {
+            lineList = lineList.concat(position + '. ' + name + ', ');
+          }
       }
     return lineList;
   }
