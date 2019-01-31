@@ -16,10 +16,14 @@ function nowServing(katzDeliLine) {
 
 function currentLine(katzDeliLine) {
   var lineList = 'The line is currently: ';
-  for (let i = 0; i < katzDeliLine.length; i++) {
-    var position = i + 1
-    var name = katzDeliLine[i];
-    lineList = lineList.concat(position + '. ' + name + ', ');
+  if (katzDeliLine.length === 0) {
+    return "The line is currently empty."
+  } else {
+      for (let i = 0; i < katzDeliLine.length; i++) {
+        var position = i + 1
+        var name = katzDeliLine[i];
+        lineList = lineList.concat(position + '. ' + name + ', ');
+      }
+    return lineList;
   }
-  return lineList;
 }
