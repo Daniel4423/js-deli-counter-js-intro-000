@@ -15,9 +15,9 @@ function nowServing(katzDeliLine) {
 }
 
 function currentLine(katzDeliLine) {
-  var lineList = 'The line is currently:'
+  var lineList = 'The line is currently:';
   for (let i = 0, i < katzDeliLine.length; i++) {
-    lineList.concat((i + 1) +'. ' + katzDeliLine[i]);
+    lineList.concat((i + 1) +'. ' + katzDeliLine[i]+ ',');
   }
   return lineList;
 }
