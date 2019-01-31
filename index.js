@@ -13,3 +13,11 @@ function nowServing(katzDeliLine) {
     return `Currently serving ${nextCustomer}.`;
   }
 }
+
+function currentLine(katzDeliLine) {
+  var lineList = 'The line is currently:'
+  for (let i = 0, i < katzDeliLine.length; i++) {
+    lineList.concat((i + 1) +'. ' + katzDeliLine[i]);
+  }
+  return lineList;
+}
